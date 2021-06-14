@@ -1,0 +1,104 @@
+.wrapper {
+    overflow:hidden;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .slider {
+    display: flex;
+    height: 100%;
+    transition: 1s;
+  }
+  
+  .slide{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    float: left;
+  }
+  
+  .slide:nth-child(odd){
+    background: #eee;
+  }
+  
+  .control {
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+
+  .backgroundBlur { 
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(6px);
+    color: white;
+  }
+
+  .arrow {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    cursor: pointer;
+    opacity: 0.75;
+    width: 40px;
+    height: 40px;
+    stroke-width: 8px;
+    stroke: white;
+    fill: transparent;
+  }
+
+  #leftArrow {
+    left: 12px;
+  }
+  
+  #rightArrow {
+    right: 12px;
+  }
+
+  @media (max-width: 1250px) {
+    .backgroundBlur {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .worksPresentation {
+      display: grid;
+      place-items: center;
+    }
+
+    .worksPresentation h3 {
+      font-size: 6vw;
+      margin: 3% 0;
+    }
+
+    .worksPresentation .categorie {
+      font-size: 6vw;
+      margin: 3% 0;
+    }
+
+    .pWorksPresentation {
+      height: 35vh;
+      width: 80%;
+      overflow: auto;
+    }
+
+    .worksPresentation p{
+      font-size: 4vw;
+    }
+  }

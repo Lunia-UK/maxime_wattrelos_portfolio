@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header id="home">
+        <nav>  
+            <!-- <div class="logo"></div> -->
+            <a href="#home">accueil</a>
+            <a href="categorie.html">projets</a>
+            <a href="#contact">contact</a>
+        </nav>
+        <h1 class="homeTitle">conception graphique 2d/3d</h1>
+        <div class="scrolIndicator">
+            <a href="#about">
+            <svg width="40" height="40">
+              <polyline class="path" points="0 0, 20 20" />
+              <polyline class="path" points="40 0, 20 20"/>
+            </svg>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <p class="target">Je suis Maxime Wattrelos, étudiant en 2ème année de licence en animation 2D et 3D à Pôle 3D (ROUBAIX).<br><br>
+                Depuis mon plus jeune âge, j'aime consacrer mon temps à mes deux passions : le dessin et la musique. Deux branches artistiques pouvant être liées entre elles et ainsi susciter une émotion singulière. Mon travail se concentre principalement sur la conception de projets graphiques 2D et sculptings 3D. Expérimenter et conceptualiser mes idées visuelles ou sonores sur différents supports artistiques fait partie de mon quotidien en tant que loisir et en tant que projet d'étude.</p>
+            <img class="aboutPhoto" src="src/img/photocv.png" alt="">
+        </section>
+        <section id="works">
+            <article class="worksArticle">
+                <div class="worksPhoto">
+                    <img class="moodImage" id="imgLesdisparues" src="src/img/les_disparue_du_claire_de_lune_version_def.jpg" alt="">
+                        <svg class="play" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                        viewBox="0 0 320.001 320.001" style="enable-background:new 0 0 320.001 320.001;" xml:space="preserve">
+                            <path d="M295.84,146.049l-256-144c-4.96-2.784-11.008-2.72-15.904,0.128C19.008,5.057,16,10.305,16,16.001v288
+	                        c0,5.696,3.008,10.944,7.936,13.824c2.496,1.44,5.28,2.176,8.064,2.176c2.688,0,5.408-0.672,7.84-2.048l256-144
+	                        c5.024-2.848,8.16-8.16,8.16-13.952S300.864,148.897,295.84,146.049z"/>
+                        </svg>
+                        <svg class="pause" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                         viewBox="0 0 45.975 45.975" style="enable-background:new 0 0 45.975 45.975;"
+	                        xml:space="preserve">
+		                    <path d="M13.987,0c-2.762,0-5,2.239-5,5v35.975c0,2.763,2.238,5,5,5s5-2.238,5-5V5C18.987,2.238,16.75,0,13.987,0z"/>
+		                    <path d="M31.987,0c-2.762,0-5,2.239-5,5v35.975c0,2.762,2.238,5,5,5s5-2.238,5-5V5C36.987,2.239,34.749,0,31.987,0z"/>
+                        </svg>
+
+                    <audio class="player">
+                        <source src="src/music/les_disparus_du_clairdelune.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="worksPresentation target">
+                    <p class="categorie">Painting</p>
+                    <h3>Les disparus du Clairdelune</h3>
+                    <p>Je me suis inspiré des romans « La passe-miroir » de Christelle Dabos pour créer cette ambiance. J'ai voulu renforcer l'aspect onirique et fantastique des deux protagonistes issus du livre.</p>
+                    <a href="works.php?category=mood&id=2" class="seeMore">Voir le projet <span>&#10095;</span></a>
+                </div>
+            </article>
+            <article id="solitaireArticle" class=" worksArticle inverse">
+                <div class="solitaireImgHover"></div>
+                <div id="solitaireImg" class="worksPhoto">
+                </div>
+                <div class="worksPresentation target">
+                    <p class="categorie">Painting</p>
+                    <h3>Le Solitaire</h3>
+                    <p>L'idée de ce dessin m'est venue en regardant des photos d'Africains, le dos courbé, portant des charges deux fois plus grandes qu'eux. Comme s'ils avaient la lourde tâche de porter le poids du monde. </p>
+                    <a href="works.php?category=painting&id=4" class="seeMore">Voir le projet <span>&#10095;</span></a>
+                </div>
+            </article>
+            <article class="worksArticle theierre" >
+                <div class="worksPhoto theierreContainer">
+                </div>
+                <div class="worksPresentation target">
+                    <p class="categorie">PROPS</p>
+                    <h3>La théière</h3>
+                    <p>J'aime beaucoup réaliser des props de la vie de tous les jours. Partir d'un simple objet du quotidien et le détourner pour le rendre spécial. Pousser sa fonction vers l'absurde.</p>
+                    <a href="works.php?category=painting&id=3" class="seeMore">Voir le projet <span>&#10095;</span></a>
+                </div>
+            </article>
+            <article class="worksArticle inverse">
+                <div class="worksPhoto">
+                    <div class="containerFrames" id="frameContainer">
+                        <div class="frame" id="frame1st">
+                            <img src="src/img/frame4.png" alt="">
+                        </div>
+                       <div class="frame" id="frameOne">
+                            <img src="src/img/frame1.png" alt="">
+                        </div>
+                        <div class="frame" id="frameTwo">
+                            <img src="src/img/frame2.png" alt="">
+                        </div>
+                        <div class="frame" id="frameThree">
+                            <img src="src/img/frame3.png" alt="">
+                        </div>
+                        <div class="frame" id="frameFour">
+                            <img src="src/img/frame4.png" alt="">
+                        </div>
+                      </div>
+                </div>
+                <div class="worksPresentation target">
+                    <p class="categorie">speed painting</p>
+                    <h3>Speed painting : le bateau</h3>
+                    <p>J'ai mis 3 heures 30 pour réaliser ce speed painting. Les premières ébauches du sol m'ont incité à partir sur un style plus traditionnel. Je me suis alors rapproché des caractéristiques des peintures sur toiles.</p>
+                    <a href="works.php?category=painting&id=5" class="seeMore">Voir le projet <span>&#10095;</span></a>
+                </div>
+            </article>
+            <article class="worksArticle alfred">
+                <div id="perso3DContainer" class="worksPhoto">
+                    <img src="src/img/yellowmood_lookdev.jpg" width="100%">
+                </div>
+                <div class="worksPresentation target">
+                    <p class="categorie">Court métrage 3D 2e année</p>
+                    <h3>Look development</h3>
+                    <a href="works3d.php?category=3d&id=1" class="seeMore">Voir le projet <span>&#10095;</span></a>
+                </div>
+            </article>
+            <aside class="seeAllProjects"><a href="categorie.html">Voir tous les projets</a></aside>
+        </section>
+    </main>
+    <footer id="contact">
+        <p class="footerName">maxime wattrelos</p>
+        <a href="mailto:webmaster@example.com">watt.maxime@gmail.com</a>
+        <a href="tel:06 72 13 24 35">06 72 13 24 35</a>
+        <div class="social">
+            <a href="https://www.instagram.com/watt_art/?hl=fr" target="_blank"><img src="src/img/icon/instagram-brands.svg" class="icon"  alt=""></a>
+            <a href="https://www.artstation.com/maxwatt" target="_blank"><img src="src/img/icon/artstation-brands.svg" class="icon" alt=""></a>
+            <a href="https://www.linkedin.com/in/maxime-wattrelos-440890205/"><img src="src/img/icon/linkedin-brands.svg" class="icon" alt=""></a>
+        </div>
+        <p class="copyright">© Copyright Maxime Wattrelos 2021 | Site: <a href="https://mathildewattrelos.com" target="_blank">Mathilde Wattrelos</a> | Musique: Maxime Wattrelos</p>
+    </footer>
+    <script src="src/js/observer.js"></script>
+    <script src="src/js/menu.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-E1G5NW8RYZ');
+    </script>
+    <script>
+const frameContainer = document.getElementById("frameContainer");
+const frame1 = document.getElementById("frameOne");
+const frame2 = document.getElementById("frameTwo");
+const frame3 = document.getElementById("frameThree");
+const frame4 = document.getElementById("frameFour");
+const frame1st = document.getElementById("frame1st");
+
+function handler(entries, observer) {
+  for (entry of entries) {
+    
+    let ratio = entry.intersectionRatio;
+
+    if (ratio >= 1) {
+      frame1.classList.add('frameOne');
+      frame2.classList.add('frameTwo');
+      frame3.classList.add('frameThree');
+      frame4.classList.add('frameFour');
+      frame1st.classList.add('frame1st');
+    } else if (ratio <= 0) {
+        frame1.classList.remove('frameOne');
+        frame2.classList.remove('frameTwo');
+        frame3.classList.remove('frameThree');
+        frame4.classList.remove('frameFour');
+        frame1st.classList.remove('frame1st');
+    } else {
+        frame1.classList.add('frameOne');
+      frame2.classList.add('frameTwo');
+      frame3.classList.add('frameThree');
+      frame4.classList.add('frameFour');
+      frame1st.classList.add('frame1st');
+    }
+  }
+}
+
+let observer2 = new IntersectionObserver(handler, {
+  threshold: [0, 1]
+});
+
+ observer2.observe(frameContainer);
+    </script>
+<script src="src/js/music.js"></script>
+</body>
+</html>

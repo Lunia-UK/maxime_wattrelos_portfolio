@@ -1,0 +1,928 @@
+:root { 
+    --primary-color: #0c1117;
+    --secondary-color: #902626;
+    --white-color: #F8FAFB;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #122027;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--white-color);
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--primary-color);
+    font-family: Open Sans, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+#home {
+    height: 100vh;
+    position: relative;
+    background: url(../img/invasion_a_okpo.jpg) no-repeat center bottom / cover;
+    /* background-attachment: fixed; */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    /* background: var(--white-color); */
+    padding: 0 200px;
+    transition: all .6s;
+    font-size: 18px;
+}
+
+.navList {
+    position: relative;
+}
+
+.subMenu {
+    height: 4vh;
+    position: relative;
+    font-size: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    background-color: #F8FAFB;
+  }
+
+.logo{
+    width: 60px;
+    height: 60px;
+    background: #aaa;
+    margin-right: auto;
+  }
+
+nav  a{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: linear-gradient(to right, var(--white-color), var(--white-color) 50%,var(--secondary-color) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 202% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    text-decoration: none; 
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 4%;
+    color: var(--white-color);
+  }
+
+nav a:hover {
+    background-position: 0 100%;
+}
+
+.navLinkScroll {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: linear-gradient(to right, var(--secondary-color), var(--secondary-color) 50%,var(--primary-color) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    text-decoration: none; 
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 4%;
+    color: var(--secondary-color);
+}
+
+
+.homeTitle {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 40%;
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-size: 4vw;
+    line-height: 5vw;
+}
+
+.scrolIndicator {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    bottom: 2%;
+}
+
+.path {
+    stroke:#F8FAFB;
+    stroke-width: 3;
+    stroke-linejoin:round;
+    stroke-linecap:round;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: dash 3s linear infinite;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .path {
+    transition: .5s
+  }
+  
+  .scrolIndicator svg:hover .path {
+    stroke:  var(--secondary-color);
+    transform: translateY(10px);
+  }
+
+.title {
+    text-transform: uppercase;
+    color: var(--white-color);
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.worksArticle {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#about { 
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--primary-color);
+    color: var(--white-color);
+    height: 90vh;
+    background: #1a1a24;
+    padding: 0 5%;
+}
+
+#about p {
+    width: 45%;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+#about .aboutPhoto {
+    width: 25%;
+    /* height: 550px; */
+    /* background: #aaa;
+    border: solid 1px #aaa;
+    border-radius: 50%; */
+}
+
+#works {
+    padding-top: 5%;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white-color);
+    font-size: 50px;
+}
+
+
+#works article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--white-color);
+    padding: 0 5%;
+}
+
+#works .inverse {
+    background: var(--primary-color) ;
+    color: var(--white-color);
+    flex-flow: row-reverse wrap;
+}
+
+.worksPhoto {
+    position: relative;
+    width: 60%;
+    /* box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.3); */
+}
+
+.worksPhoto img {
+    width: 100%;
+}
+
+.worksPresentation {
+   width: 30%; 
+   font-size: 16px;
+   transform : translateY(-30px);
+}
+
+.worksPresentation .categorie {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}   
+
+.worksPresentation p, .worksPresentation h3 {
+    margin: 5% 0;
+}
+
+.worksPresentation p {
+    line-height: 23px;
+}
+
+.worksPresentation h3 {
+    font-size: 2rem;
+}
+
+#works aside {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2% 0;
+    background: var(--white-color);
+}
+
+.moodImage {
+    transition: .3s;
+}
+
+.audioControles {
+    position: relative;
+    width:100%;
+    height: 50px;
+    transition: .3s;
+}
+
+.play, .pause {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 8%;
+    z-index: 3;
+    opacity: .8;
+    fill: var(--white-color);
+    transition: .3s;
+}
+
+.pause {
+    display: none;
+}
+
+.seeMore span{
+    display: inline-block;
+    transition: .5s;
+}
+
+.seeMore:hover span{
+    transform: translateX(5px);
+}
+
+#solitaireArticle {
+    overflow: hidden;
+    position: relative;
+    height: 110vh;
+    background: url(../img/fond-def-quali.jpg) no-repeat center center / cover !important;
+}
+
+#solitaireArticle .worksPresentation {
+    margin-right: auto;
+}
+
+#solitaireArticle .worksPresentation, #solitaireArticle .worksPresentation a { 
+    color: var(--primary-color);
+}
+
+#solitaireImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/solitaire-solo-1920.png) no-repeat center center / cover !important;
+    transition: .3s;
+}
+
+.solitaireImgHover {
+    position: absolute;
+    width: 50%;
+    top:0;
+    bottom:0;
+    right: 0;
+    z-index: 3;
+}
+
+.solitaireImgHover:hover + #solitaireImg {
+    transform: scale(1.02);
+}
+
+.theierreContainer{
+    display: grid;
+    place-items: center;
+    
+}
+
+.theierre{
+    background: url(../img/props_def_insta.jpg) no-repeat center bottom / cover !important;
+}
+
+#theierre {
+    width: 100%;
+}
+
+.containerFrames {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 90%;
+    height: 300px;
+}
+
+.frame {
+    position: absolute;
+    opacity: 0;
+  }
+
+.frame1st{
+    opacity: 1;
+    animation: frame1st 2.3s forwards;
+}
+
+@keyframes frame1st {
+    80%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+  .frameOne {
+    animation: example 6s forwards;
+    animation-delay: 2s;
+  }
+  
+  @keyframes example {
+    0% {opacity: 0;}
+    10%{opacity: 1;}
+    30%{transform: translate(0px, 0px); opacity: 1}
+    33%{transform: translate(-20px, -20px); opacity: .5}
+    63%{transform: translate(-20px, -20px); opacity: .5}
+    66%{transform: translate(-40px, -40px); opacity: .3}
+    97%{transform: translate(-40px, -40px); opacity: .3}
+    100%{transform: translate(-60px, -60px); opacity: .2}
+  }
+  
+  .frameTwo {
+    animation: example2 4.15s forwards;
+    animation-delay: 3.8s;
+  }
+  
+  @keyframes example2 {
+    0%{opacity: 1;}
+    48%{transform: translate(0px, 0px); opacity: 1;}
+    51% {transform: translate(-20px, -20px); opacity: .5;}
+    97% {transform: translate(-20px, -20px); opacity: .5;}
+    100% {transform: translate(-40px, -40px); opacity: .3;}
+  }
+  
+  .frameThree {
+    animation: example3 2.1s forwards;
+    animation-delay: 5.8s;
+  }
+  
+  @keyframes example3 {
+    0%{opacity: 1;}
+    97%{transform: translate(0px, 0px); opacity: 1;}
+    100%{transform: translate(-20px, -20px); opacity: .5;}
+  }
+  
+  .frameFour{
+    animation: example4 .5s forwards ;
+    animation-delay: 7.85s;
+  }
+  
+  @keyframes example4 {
+    0%{opacity: 1;}
+    100% { opacity: 1}
+  }
+
+frame.Four:hover {
+    opacity: 1;
+}
+
+.seeAllProjects a {
+    color: var(--primary-color);
+}
+
+#perso3DContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#perso3DContainer img {
+    width: 900px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 40vh;
+}
+
+.footerName {
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: var(--white-color);
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+.copyright {
+    color: var(--white-color);
+    font-size: 15px;
+}
+
+.alfred3Ddetails {
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+.icon {
+    width: 40px;
+}
+
+.categorie {
+    font-size: 20px;
+}
+
+.categorieSection {
+    display: flex;
+    width: 96%;
+    height: 92vh;
+    margin: 6vh 1% 1% 2% ;
+}
+
+.categorieSection a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.flex {
+    flex: 1;
+}
+
+.hover:hover {
+    flex: 4;
+}
+
+.categorieSection article {
+    margin: 0 5px;
+    transition: .5s;
+}
+
+.categoriePainting {
+    background: url(../img/Stress-in-street-def.jpg) no-repeat center center / cover;
+}
+
+.categorieSection p{
+    position: relative;
+    opacity: 0;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    transition: .5s;
+    background: rgba(248, 250, 251, 0.35);
+    backdrop-filter: blur(5px);
+    padding: 1% 2%;
+    border: solid 1px rgba(248, 250, 251, 0);
+    border-radius: 5px;
+}
+
+.categoriePainting:hover p {
+    opacity: 1;
+}
+
+.categorieMood:hover p {
+    opacity: 1;
+}
+
+.categorie3D:hover p {
+    opacity: 1;
+}
+
+.categorieMood {
+    background: url(../img/tasty_lazy.png) no-repeat center center / cover;
+}
+
+.categorie3D {
+    background: url(../img/yellowmood_lookdev.jpg) no-repeat center center / cover;
+}
+
+.projectSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--white-color);
+}
+
+.projectTitle {
+    margin: 5% 0;
+}
+
+.projectSection article {
+    width: 40%;
+}
+
+.projectSection h2 {
+    text-align: left;
+    font-size: 1rem;
+    margin: 1rem 0;
+    color: var(--secondary-color)
+}
+
+.projectSection aside{
+    width: 40%;
+}
+
+.projectSection aside img {
+    width: 100%;
+    box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.3);
+}
+
+.prevNextProject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    margin: 5% 0
+}
+
+.prevNextProject button {
+    margin: 0 2%;
+    padding: .75rem 1.5rem;
+    background: none;
+    color: var(--white-color);
+}
+
+.target {
+    transition: 1s;
+}
+
+.targetActif {
+    transform : translateY(0px);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(12, 7vw);
+    grid-gap: 15px;
+}
+
+.gallery__item {
+    overflow: hidden;
+}
+
+.gallery__item img {
+    transition: .3s;
+}
+
+.gallery__item:hover img {
+    transform: scale( 1.03);
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gallery__item--3 {
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+
+.gallery__item--4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+
+.gallery__item--5 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 10;
+}
+
+.gallery__item--6 {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    grid-row-start: 6;
+    grid-row-end: 10;
+}
+
+.gallery__item--7 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 10;
+    grid-row-end: 14;
+}
+
+.gallery__item--8 {
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 10;
+    grid-row-end: 14;
+}
+
+.gallery__item--9 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 14;
+    grid-row-end: 16;
+}
+
+.gallery__item--10 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 14;
+    grid-row-end: 16;
+}
+
+.gallery__item--11 {
+    grid-column-start: 1;
+    grid-column-end: 10;
+    grid-row-start: 16;
+    grid-row-end: 18;
+}
+
+.gallery__item--3D--1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.gallery__item--3D--2 {
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.gallery__item--3D--3 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 9;
+}
+
+.gallery__item--3D--4 {
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 5;
+    grid-row-end: 9;
+}
+
+.gallery__item--3D--5 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 9;
+    grid-row-end: 14;
+}
+
+.gallery__item--3D--6 {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    grid-row-start: 9;
+    grid-row-end: 14;
+}
+
+.gallery__item--3D--7 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 14;
+    grid-row-end: 18;
+}
+
+.gallery__item--3D--8 {
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 14;
+    grid-row-end: 18;
+}
+
+.gallery__item--3D--9 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 18;
+    grid-row-end: 20;
+}
+
+.gallery__item--3D--10 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 18;
+    grid-row-end: 20;
+}
+
+.gallery__item--mood--1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.gallery__item--mood--2 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.gallery__item--mood--3 {
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.gallery__item--mood--4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 10;
+}
+
+.gallery__item--mood--5 {
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 10;
+}
+
+.alfred {
+    background: #1a1a24;
+}
+
+.artile3D{
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--white-color);
+    height: 80vh;
+}
+
+.artile3D h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+}
+
+.arrow svg {
+    stroke-width: 8px;
+    stroke: white;
+    fill: transparent;
+    opacity: 0.75;
+}
+
+.prev {
+    left: 13px;
+}
+
+.next {
+    right: 13px;
+}
+
+@media (max-width: 1250px) {
+    #header {
+        background: url(../img/props_def_insta.jpg) no-repeat center center / cover;
+    }
+
+    nav  {
+       justify-content: space-around;
+       padding: 0;
+    }
+
+    .homeTitle {
+        width: 90%;
+        font-size: 8vw;
+        line-height: 10vw;
+        color: var(--primary-color)
+    }
+
+    #about , #works article, #works .inverse {
+        flex-flow: column-reverse;
+        padding: 10% 5%;
+        height: auto;
+    }
+
+    #about p {
+        width: 90%;
+    }
+
+    .worksPresentation, .worksPhoto {
+        width: 90%;
+    }
+
+    .target {
+        margin-bottom: 8%;
+    }
+
+    .categorieSection {
+        flex-direction: column;
+        height: 92vh;
+        justify-content: center;
+    }
+
+    .categorieSection p {
+        opacity: 1;
+        font-size: 4vw;
+    }
+
+    .projectSection {
+        flex-direction: column;
+    }
+
+    .projectSection article, .projectSection aside {
+        width: 90%;
+    }
+
+    #theierre {
+        position: relative;
+        width: 300px;
+    }
+    
+    .footerName {
+        font-size: 1.5rem;
+    }
+
+    .social {
+        width:80%
+    }
+}
